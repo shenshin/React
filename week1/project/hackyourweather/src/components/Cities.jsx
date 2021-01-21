@@ -16,14 +16,14 @@ const Cities = ({ weatherData }) => (
   */
   <>
     {weatherData.map((cityData) => {
+      // utter destructuring
       const {
         name: cityName,
         coord: { lon: longitude, lat: lattitude },
         main: { temp_min: minTemp, temp_max: maxTemp },
         sys: { country: countryName },
-        weather: [details],
+        weather: [{ main: weatherName, description: weatherDescr }],
       } = cityData;
-      const { main: weatherName, description: weatherDescr } = details;
       return (
         <City
           key={uuid()}
