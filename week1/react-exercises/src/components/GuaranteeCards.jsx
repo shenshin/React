@@ -2,7 +2,7 @@ import React from 'react';
 import { v4 as uuid } from 'uuid';
 import Guarantee from './Guarantee';
 
-/* 
+/*
 Create a functional component called <Guarantee>
 Instantiate it 3 times
 Give each component 3 props: an img, title and description
@@ -37,8 +37,8 @@ const GuaranteeCards = () => (
     <h3>Exercise 2: Perfect customer service.</h3>
     <div style={{ display: 'flex' }}>
       {
-        /* 
-        Pass down to each component the appropriate content. 
+        /*
+        Pass down to each component the appropriate content.
         */
         guarantees.map((item) => (
           <Guarantee

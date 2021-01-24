@@ -1,9 +1,11 @@
-/* 
-    Inside <Button> create a <button> with the text Add 1! and onClick attribute
-    Pass down the count state variable to <Count>, and the setCount to <Button>
-    Inside <Counter>, declare a variable called feedback above the return statement. Give this variable a ternary operator value: if count is higher than 10 it should display the string "It's higher than 10!", else it displays "Keep counting..."
-        Test out if it works by importing <Counter> into the top level component, which is <App>
-
+/*
+  Inside <Button> create a <button> with the text Add 1! and onClick attribute
+  Pass down the count state variable to <Count>, and the setCount to <Button>
+  Inside <Counter>, declare a variable called feedback above the
+  return statement. Give this variable a ternary operator value: if
+  count is higher than 10 it should display the string "It's higher
+  than 10!", else it displays "Keep counting..."
+  Test out if it works by importing <Counter> into the top level component, which is <App>
 
 */
 import React, { useState } from 'react';
@@ -12,7 +14,8 @@ import Button from './Button';
 
 const Counter = () => {
   /*
-  Inside <Counter> define a state variable called count (initialized with value 0) and state handler called setCount
+    Inside <Counter> define a state variable called count (initialized
+    with value 0) and state handler called setCount
   */
   const [count, setCount] = useState(0);
   // "Add one!" and "Reset" buttons handlers
@@ -22,8 +25,11 @@ const Counter = () => {
   const reset = () => {
     setCount(0);
   };
-  /* 
-  Inside <Counter>, declare a variable called feedback above the return statement. Give this variable a ternary operator value: if count is higher than 10 it should display the string "It's higher than 10!", else it displays "Keep counting..."
+  /*
+    Inside <Counter>, declare a variable called feedback above the return
+    statement. Give this variable a ternary operator value: if count is
+    higher than 10 it should display the string "It's higher than 10!",
+    else it displays "Keep counting..."
   */
   const feedback = count > 10 ? "It's higher than 10!" : 'Keep counting...';
   return (

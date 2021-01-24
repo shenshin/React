@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid';
 import Hobbies from './Hobbies';
 
 const HobbyList = () => {
-  /* 
+  /*
   Put the hobbies variable into the <HobbyList> component.
   */
   const hobbies = [
@@ -18,8 +18,9 @@ const HobbyList = () => {
       <h3>Exercise 1: Extreme hobbies</h3>
       <ul>
         {hobbies
-          /* 
-          In the return statement of the <HobbyList> use the map() function to return an instance of <Hobby>
+          /*
+          In the return statement of the <HobbyList> use the map()
+          function to return an instance of <Hobby>
           */
           .map((item) => (
             /* Pass down the hobby as a prop (don't forget to add the key prop as well!) */

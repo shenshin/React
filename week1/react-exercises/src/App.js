@@ -6,6 +6,7 @@ import Counter from './components/Counter';
 
 function App() {
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <div className="App">
       {/* Exercise 1 */}
       <HobbyList />
