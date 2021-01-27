@@ -1,6 +1,6 @@
 import React from 'react';
 
-const City = ({ cityWeather, error, loading }) => (
+const City = ({ error, loading, cityWeather }) => (
   <>
     {error && <p>{error}</p>}
     {loading && !error && (
@@ -12,9 +12,7 @@ const City = ({ cityWeather, error, loading }) => (
       && Object.keys(cityWeather).length > 0 ? (
         <div className="city-card">
           <h2>
-            {cityWeather.name}
-            {', '}
-            {cityWeather.sys.country}
+            {`${cityWeather.name}, ${cityWeather.sys.country}`}
           </h2>
           <div className="city-weather-descr">
             <h3>{cityWeather.weather[0].main}</h3>
@@ -22,18 +20,13 @@ const City = ({ cityWeather, error, loading }) => (
           </div>
           <div>
             <p>
-              {'Min temperature: '}
-              {cityWeather.main.temp_min}
+              {`Min temperature: ${cityWeather.main.temp_min}`}
             </p>
             <p>
-              {'Max temperature: '}
-              {cityWeather.main.temp_max}
+              {`Max temperature: ${cityWeather.main.temp_max}`}
             </p>
             <p>
-              {'Location: '}
-              {cityWeather.coord.lat}
-              {', '}
-              {cityWeather.coord.lon}
+              {`Location: ${cityWeather.coord.lat}, ${cityWeather.coord.lon}`}
             </p>
           </div>
         </div>

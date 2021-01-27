@@ -4,15 +4,16 @@
 // Pass down the friend state variable to the <FriendProfile>
 import React from 'react';
 
-const FriendProfile = ({ friend }) => {
-  const {
+const FriendProfile = ({
+  friend: {
     firstName,
     lastName,
     address,
     country,
     email,
     phoneNum,
-  } = friend;
+  },
+}) => {
   const style = {
     marginLeft: '1rem',
   };
