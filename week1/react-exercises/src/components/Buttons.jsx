@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = ({ addOne, reset }) => (
+const Buttons = ({ addOne, reset }) => (
   <>
     <button type="button" onClick={addOne}>
       Add 1!
@@ -11,4 +11,4 @@ const Button = ({ addOne, reset }) => (
   </>
 );
 
-export default Button;
+export default Buttons;

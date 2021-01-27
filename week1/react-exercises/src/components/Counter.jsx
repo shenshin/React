@@ -10,7 +10,7 @@
 */
 import React, { useState } from 'react';
 import Count from './Count';
-import Button from './Button';
+import Buttons from './Buttons';
 
 const Counter = () => {
   /*
@@ -19,12 +19,8 @@ const Counter = () => {
   */
   const [count, setCount] = useState(0);
   // "Add one!" and "Reset" buttons handlers
-  const addOne = () => {
-    setCount(count + 1);
-  };
-  const reset = () => {
-    setCount(0);
-  };
+  const addOne = () => setCount(count + 1);
+  const reset = () => setCount(0);
   /*
     Inside <Counter>, declare a variable called feedback above the return
     statement. Give this variable a ternary operator value: if count is
@@ -39,7 +35,7 @@ const Counter = () => {
       <Count count={count} />
       <p>{feedback}</p>
       {/* Pass down setCount to <Button> */}
-      <Button addOne={addOne} reset={reset} />
+      <Buttons addOne={addOne} reset={reset} />
     </>
   );
 };
