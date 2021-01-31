@@ -1,5 +1,5 @@
 :root {
-  --foreground: white;
+  --foreground: aliceblue;
   --background: black;
 }
 
@@ -33,6 +33,23 @@ p {
   width: 20rem;
   border: 1px solid var(--foreground);
   border-radius: 5px;
+  position: relative;
+}
+
+.city-card-remove {
+  --size: 2rem;
+  line-height: 0;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  right: 0.3rem;
+  top: 0.3rem;
+  border: 0;
+  color: var(--foreground);
+  background-color: unset;
+  font-size: calc(var(--size) * 1.1);
+  font-weight: 200;
+  cursor: pointer;
 }
 
 .city-weather-descr {
