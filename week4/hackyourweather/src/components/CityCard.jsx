@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const City = ({ cityWeather, id, removeCard }) => (
+const CityCard = ({ cityWeather, removeCard }) => (
   <div className="city-card">
     <h2>
-      {`${cityWeather.name}, ${cityWeather.sys.country}`}
+      <Link to={`/${cityWeather.id}`}>
+        {`${cityWeather.name}, ${cityWeather.sys.country}`}
+      </Link>
     </h2>
     <div className="city-weather-descr">
       <h3>{cityWeather.weather[0].main}</h3>
@@ -20,17 +23,15 @@ const City = ({ cityWeather, id, removeCard }) => (
         {`Location: ${cityWeather.coord.lat}, ${cityWeather.coord.lon}`}
       </p>
     </div>
-    {/*
-      Allow a user to delete a search entry, by clicking the "X"
-    */}
     <button
       type="button"
       className="city-card-remove"
-      onClick={() => removeCard(id)}
+      onClick={() => removeCard(cityWeather.uniqueId)}
     >
       &otimes;
     </button>
   </div>
+
 );
 
-export default City;
+export default CityCard;

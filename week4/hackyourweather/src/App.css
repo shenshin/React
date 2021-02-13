@@ -22,6 +22,9 @@ body {
 p {
   margin-bottom: 0.3rem;
 }
+a {
+  color: var(--foreground);
+}
 
 .App {
   text-align: center;
