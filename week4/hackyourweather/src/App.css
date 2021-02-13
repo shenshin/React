@@ -83,3 +83,16 @@ a {
   border: 1px solid var(--foreground);
   border-radius: 5px;
 }
+
+.weather-chart {
+  margin: 1rem auto;
+  background-color: #0b0e12;
+  border: 1px solid #535353;
+}
+
+.back-button {
+  padding: 0.2rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}

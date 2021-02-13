@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 const CityCard = ({ cityWeather, removeCard }) => (
   <div className="city-card">
     <h2>
+      {/*
+        - Allow users to click on the searched city to open the city page
+        - The city page will be on a different route identified by the city id
+        (make use of the <Link> component given by react-router-dom)
+      */}
       <Link to={`/${cityWeather.id}`}>
         {`${cityWeather.name}, ${cityWeather.sys.country}`}
       </Link>

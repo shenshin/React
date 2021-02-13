@@ -40,6 +40,9 @@ function App() {
   return (
     <div className="App">
       <h1>Weather</h1>
+      {/*
+        Divide your page into 2 different routes (/ and /:cityId), using react-router-dom
+      */}
       <Router>
         <Switch>
           <Route path="/" exact>
