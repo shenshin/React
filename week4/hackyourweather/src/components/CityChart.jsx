@@ -1,7 +1,3 @@
-/*
-  On the city page there will be a chart (made with recharts)
-  that displays the correct data for 5-day forecast
-*/
 import { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import {
@@ -48,6 +44,10 @@ const CityChart = () => {
       {!error && !loading && cityName && (
         <>
           <h2>{`5 day forecast for ${cityName}`}</h2>
+          {/*
+          On the city page there will be a chart (made with recharts)
+          that displays the correct data for 5-day forecast
+          */}
           <AreaChart
             className="weather-chart"
             width={800}
